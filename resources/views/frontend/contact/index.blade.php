@@ -26,7 +26,7 @@
 
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
+                <input type="text" class="form-control" id="phone" name="phone" required placeholder="0608058157 Or +212608058157 ">
             </div>
 
             <div class="form-group">

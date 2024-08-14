@@ -9,7 +9,7 @@
                             <ul class="info clearfix">
                                 <li><i class="fas fa-map-marker-alt"></i>13 Rue alqadi Ayaad 62000 - Nador/Maroc</li>
                                 <li><i class="fas fa-clock"></i>Mon - Sat  9.00 - 18.00</li>
-                                <li><i class="fas fa-phone"></i><a href="tel:212808669557">+212 8 08 66 95 57</a></li>
+                                <li><i class="fas fa-phone"></i><a href="tel:+212808669557">+212 8 08 66 95 57 Or +212 6 37 65 42 06</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
          <li><a href="#news"><span>News </span></a> </li>       
 
          <li><a href="#teams"><span>Teams  </span></a> </li>
-         <li><a href="#newletter"><span>Newsletter  </span></a> </li>
+         <li><a href="#category"><span>category  </span></a> </li>
 
 
      <li><a href="{{ route('contact.index') }}"><span>Contact</span></a></li> 

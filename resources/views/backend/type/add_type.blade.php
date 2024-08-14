@@ -31,7 +31,7 @@
 
 			 	<div class="mb-3">
  <label for="exampleInputEmail1" class="form-label">Type Icon   </label>
-					 <input type="text" name="type_icon" class="form-control @error('type_icon') is-invalid @enderror " >
+					 <input type="text" name="type_icon" class="form-control @error('type_icon') is-invalid @enderror "  value="ICON" >
            @error('type_icon')
            <span class="text-danger">{{ $message }}</span>
            @enderror

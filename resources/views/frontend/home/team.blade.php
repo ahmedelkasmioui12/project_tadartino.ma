@@ -23,12 +23,12 @@
                         <div class="lower-content">
                             <div class="inner">
                                 <h4><a href="{{ route('agent.details', $item->id) }}">{{ $item->name }}</a></h4>
-                                <span class="designation">{{ $item->email }}</span>
+                                <span class="designation"></span>
                                 <ul class="social-links clearfix">
                                     <li><a href="mailto:{{ $item->email }}"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="https://www.instagram.com/tadartino.ma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                     <li><a href="https://www.facebook.com/tadartino.ma"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="tel:0608058157"><i class="fas fa-phone"></i></a></li>
+                                    <li><a href="https://wa.me/{{ $item->phone }}"><i class="fab fa-whatsapp"></i></a></li>
 
 
                                     

@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image; // Make sure this is included for resizing
 use App\Models\PropertyMessage;
 use App\Models\State;
+ use App\Models\Subscription ; 
+ use Illuminate\Support\Facades\Mail;
+
+
 class PropertyController extends Controller
 {
     public function AllProperty()
@@ -441,6 +445,7 @@ public function UpdatePropertyMultiimage(Request $request){
         return redirect()->back()->with('error', 'No valid files were provided.');
     }
 }
+
 
 public function showForm()
 {
