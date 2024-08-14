@@ -1,7 +1,7 @@
 @extends('frontend.frontend_dashboard')
 @section('main')
 @php
-$property = App\Models\Property::where('status','1')->where('featured','1')->get();
+$property = App\Models\Property::where('status','1')->get();
 @endphp
 <script>
     function copyToClipboard() {
