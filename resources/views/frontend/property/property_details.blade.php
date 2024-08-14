@@ -115,12 +115,12 @@
     <ul class="list clearfix">
         <li>Property ID: <span>{{ $property->property_code }}</span></li>
         <li>Rooms: <span>{{ $property->bedrooms }}</span></li>
-        <li>Garage Size: <span>{{ $property->garage_size }} Sq Ft</span></li>  
+        <li>Garage Size: <span>{{ $property->garage_size }} m²</span></li>  
         
         <li>Property Type: <span>{{ $property->type->type_name }}</span></li>
         <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
         <li>Property Status: <span>For {{ $property->property_status }}</span></li>
-        <li>Property Size: <span>{{ $property->property_size }} Sq Ft</span></li>
+        <li>Property Size: <span>{{ $property->property_size }} m²</span></li>
         <li>Garage: <span>{{ $property->garage }}</span></li>
     </ul>
                             </div>
@@ -419,8 +419,12 @@
                 <div class="price-box clearfix">
                     <div class="price-info pull-left">
                         <h6>Start From</h6>
-                        <h4>${{ $item->lowest_price }}</h4>
-                    </div>
+                        @if($item->lowest_price == 0)
+                        <h4>Prix négociable</h4>
+                    @else
+                        <h4>DH{{ $item->lowest_price }}</h4>
+                    @endif
+                                        </div>
                     <ul class="other-option pull-right clearfix">
                         <li><a href="property-details.html"><i class="icon-12"></i></a></li>
                         <li><a href="property-details.html"><i class="icon-13"></i></a></li>
@@ -430,7 +434,7 @@
                         <ul class="more-details clearfix">
                             <li><i class="icon-14"></i>{{ $item->bedrooms }} Beds</li>
                             <li><i class="icon-15"></i>{{ $item->bathrooms }} Baths</li>
-                            <li><i class="icon-16"></i>{{ $item->property_size }} Sq Ft</li>
+                            <li><i class="icon-16"></i>{{ $item->property_size }} m²</li>
                         </ul>
                 <div class="btn-box"><a href="{{ url('property/details/'.$item->id.'/'.$item->property_slug) }}" class="theme-btn btn-two">See Details</a></div>
             </div>

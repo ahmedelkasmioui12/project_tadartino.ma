@@ -171,7 +171,7 @@
                 <ul class="more-details clearfix">
                     <li><i class="icon-14"></i>${value.property.bedrooms} Beds</li>
                     <li><i class="icon-15"></i>${value.property.    bathrooms} Baths</li>
-                    <li><i class="icon-16"></i>${value.property.    property_size} Sq Ft</li>
+                    <li><i class="icon-16"></i>${value.property.    property_size} m²</li>
                 </ul>
                 <div class="other-info-box clearfix">
                     

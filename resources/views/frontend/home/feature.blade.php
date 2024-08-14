@@ -58,8 +58,12 @@ $property = App\Models\Property::where('status','1')->limit(3)->get();
                         <div class="price-box clearfix">
                             <div class="price-info pull-left">
                                 <h6>Start From</h6>
-                                <h4>${{ $item->lowest_price }}</h4>
-                            </div>
+                                @if($item->lowest_price == 0)
+                                <h4>Prix négociable</h4>
+                            @else
+                                <h4>DH{{ $item->lowest_price }}</h4>
+                            @endif
+                                                        </div>
                           
     <ul class="other-option pull-right clearfix">
         <li><a href="#" onclick="copyToClipboard(); return false;"><i class="icon-37"></i></a></li>
@@ -70,7 +74,7 @@ $property = App\Models\Property::where('status','1')->limit(3)->get();
                         <ul class="more-details clearfix">
                             <li><i class="icon-14"></i>{{ $item->bedrooms }} Beds</li>
                             <li><i class="icon-15"></i>{{ $item->bathrooms }} Baths</li>
-                            <li><i class="icon-16"></i>{{ $item->property_size }} Sq Ft</li>
+                            <li><i class="icon-16"></i>{{ $item->property_size }} m²  </li>
                         </ul>
      <div class="btn-box"><a href="{{ url('property/details/'.$item->id.'/'.$item->property_slug) }}" class="theme-btn btn-two">See Details</a></div>
                     </div>
