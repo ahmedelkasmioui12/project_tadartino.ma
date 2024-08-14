@@ -2,7 +2,8 @@
 @section('main')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
  <!--Page Title-->
-        <section class="page-title centred" style="background-image: url({{ asset('frontend/assets/images/background/page-title-5.jpg') }});">
+        <section class="page-title centred"             style="background-image: url({{ asset('frontend/assets/images/banner/banner-1.jpg') }});">
+            ">
             <div class="auto-container">
                 <div class="content-box clearfix">
                     <h1>Schedule Request  </h1>
