@@ -238,7 +238,7 @@
          <div class="form-check form-check-inline">
 <input type="checkbox" name="hot" value="1" class="form-check-input" id="checkInline" checked >
                 <label class="form-check-label" for="checkInline" >
-Notre Projet                </label>
+our Project                </label>
             </div>
          
           

@@ -69,7 +69,7 @@
          <li><a href="#newletter"><span>Newsletter  </span></a> </li>
 
 
-     <li><a href="contact.html"><span>Contact</span></a></li> 
+     <li><a href="{{ route('contact.index') }}"><span>Contact</span></a></li> 
 
      <li> 
 </li> 

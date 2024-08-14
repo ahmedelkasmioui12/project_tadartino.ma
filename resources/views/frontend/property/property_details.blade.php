@@ -282,22 +282,22 @@
                 <div class="inner">
                     <h4>Admin </h4>
                     <ul class="info clearfix">
-                        <li><i class="fas fa-map-marker-alt"></i>84 St. John Wood High Street, 
-                        St Johns Wood</li>
-                        <li><i class="fas fa-phone"></i><a href="tel:03030571965">030 3057 1965</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Admin </li>
+                        <li><i class="fas fa-phone"></i><a href="tel:0637654206">0637654206</a></li>
                     </ul>
-                    <div class="btn-box"><a href="agents-details.html">View Listing</a></div>
+                    <div class="btn-box"><a href="https://wa.me/0637654206?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20annonce" target="_blank">Contacter </a>
+                    </div>
                 </div>
              @else
               <figure class="author-thumb"><img src="{{ (!empty($property->user->photo)) ? url('upload/agent_images/'.$property->user->photo) : url('upload/no_image.jpg') }}" alt=""></figure>
                 <div class="inner">
                     <h4>{{ $property->user->name }}</h4>
                     <ul class="info clearfix">
-                        <li><i class="fas fa-phone"></i><a href="tel:03030571965">{{ $property->user->phone }}</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:0637654206">{{ $property->user->phone }}</a></li>
 
                     </ul>
                     <div class="btn-box">
-                        <a href="https://wa.me/0608058157?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20annonce" target="_blank">Contacter </a>
+                        <a href="https://wa.me/0637654206?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20annonce" target="_blank">Contacter </a>
                     </div>
                                     </div>
              @endif 

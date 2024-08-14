@@ -27,8 +27,12 @@ $property = App\Models\Property::where('status','1')->where('hot','1')->limit(3)
   <section class="deals-section sec-pad">
             <div class="auto-container">
                 <div class="sec-title">
-                    <h5>Hot Property</h5>
-                    <h2>Our Best Deals</h2>
+                   
+                    <h2>Our Own Project
+                    </h2>
+                    <p>Experience the innovation and dedication we bring to real estate with our own carefully developed projects, designed to exceed your expectations.
+
+                    </p>
                 </div>
                   
  <div class="row clearfix">

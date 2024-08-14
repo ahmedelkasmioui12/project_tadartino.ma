@@ -37,7 +37,6 @@
     </ul>
 </div>
 <div class="text">
-    <p>Success isn’t really that difficult. There is a significant portion of the population here in North America, that actually want and need success to be hard! Why? So they then have a built-in excuse.when things don’t go their way! Pretty sad situation, to say the least. Have some fun and hypnotize yourself to be your very own Ghost of Christmas future”</p>
 </div>
 <ul class="info clearfix mr-0">
     <li><i class="fab fa fa-envelope"></i><a href="mailto:bean@realshed.com">{{ $agent->email }}</a></li>
