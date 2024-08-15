@@ -228,12 +228,13 @@ Route::get('/agent/details/{id}', [IndexController::class, 'AgentDetails'])->nam
    Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
 
    Route::controller(BlogController::class)->group(function(){
-
      Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');  
      Route::post('/store/blog/category', 'StoreBlogCategory')->name('store.blog.category'); 
-     Route::get('/blog/category/{id}', 'EditBlogCategory');
-          Route::post('/update/blog', 'updatePost')->name('update.post');
-     Route::get('/delete/blog/{id}', 'DeletePost')->name('delete.post');  
+     Route::get('/blog/category/{id}', 'EditBlogCategory')->name('edit.blog.category'); ;
+     Route::post('/update/blog/category', 'UpdateBlogCategory')->name('update.blog.category');
+     Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category'); 
+
+
 
 });
 Route::controller(BlogController::class)->group(function(){
@@ -243,8 +244,7 @@ Route::controller(BlogController::class)->group(function(){
      Route::post('/store/post', 'StorePost')->name('store.post'); 
      Route::get('/edit/post/{id}', 'EditPost')->name('edit.post');
      Route::post('/update/post', 'UpdatePost')->name('update.post');
-     Route::get('/delete/post/{id}', 'DeletePost')->name('delete.post'); 
-
+     Route::get('/delete/post/{id}', 'DeletePost')->name('delete.post');  
 });
 Route::get('/blog/details/{slug}', [BlogController::class, 'BlogDetails']);
 Route::get('/blog/cat/list/{id}', [BlogController::class, 'BlogCatList']);

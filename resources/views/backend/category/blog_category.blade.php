@@ -36,7 +36,7 @@
                         <th>Sl </th>
                         <th>Blog Category Name </th>
                         <th>Blog Category Slug </th>
-                        <th>Action </th> 
+                
                       </tr>
                     </thead>
                     <tbody>
@@ -46,8 +46,7 @@
                         <td>{{ $item->category_name }}</td>
                         <td>{{ $item->category_slug }}</td>
                         <td>
-       <a href="{{ route('edit.state',$item->id) }}" class="btn btn-inverse-warning"> Edit </a>
-       <a href="{{ route('delete.state',$item->id) }}" class="btn btn-inverse-danger" id="delete"> Delete  </a>
+
                         </td> 
                       </tr>
                      @endforeach

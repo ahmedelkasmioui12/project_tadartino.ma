@@ -70,31 +70,31 @@
                                             <tbody>
                                                 <tr>
                                                     <th>Customer Name : </th>
-                                                    <td>{{ $msgdetails['user']['name'] }}</td>
+                                                    <td>{{ $msgdetails['user']['name'] ?? 'N/A' }}</td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Customer Email : </th>
-                                                    <td>{{ $msgdetails['user']['email'] }}</td>
+                                                    <td>{{ $msgdetails['user']['email']?? 'N/A'  }}</td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Customer Phone : </th>
-                                                    <td>{{ $msgdetails['user']['phone'] }}</td>
+                                                    <td>{{ $msgdetails['user']['phone']?? 'N/A'  }}</td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Property Name : </th>
-                                                    <td>{{ $msgdetails['property']['property_name'] }}</td>
+                                                    <td>{{ $msgdetails['property']['property_name'] ?? 'N/A' }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Property Code : </th>
-                                                    <td>{{ $msgdetails['property']['property_code'] }}</td>
+                                                    <td>{{ $msgdetails['property']['property_code']?? 'N/A'  }}</td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Property Status : </th>
-                                                    <td>{{ $msgdetails['property']['property_status'] }}</td>
+                                                    <td>{{ $msgdetails['property']['property_status']?? 'N/A'  }}</td>
                                                 </tr>
                                                 <tr>
                                                     <th>Message : </th>

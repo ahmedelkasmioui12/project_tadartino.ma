@@ -105,7 +105,7 @@
                             </nav>
                         </div>
                         <div class="btn-box">
-                            <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                            <a href="{{ route('user.properties.create') }}"  class="theme-btn btn-one"><span>+</span>Add Listing</a>
                         </div>
                     </div>
                 </div>

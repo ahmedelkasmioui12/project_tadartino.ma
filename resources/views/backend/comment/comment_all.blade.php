@@ -31,8 +31,8 @@
                    @foreach($comment as $key => $item)
                       <tr>
                         <td>{{ $key+1 }}</td>
-                        <td>{{ $item['post']['post_title'] }}</td>
-                        <td>{{ $item['user']['name'] }}</td>
+                        <td>{{ $item['post']['post_title'] ?? 'N/A'  }}</td>
+                        <td>{{ $item['user']['name'] ?? 'N/A'  }}</td>
                          <td>{{ $item->subject }}</td>
                         <td>
                         <a href="{{ route('admin.comment.reply',$item->id) }}" class="btn btn-inverse-warning"> Reply </a>

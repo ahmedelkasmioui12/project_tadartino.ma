@@ -76,7 +76,7 @@
 
  <label for="exampleInputEmail1" class="form-label">Post Title :  </label>
 
-  <code> {{ $comment['post']['post_title'] }}</code>  
+  <code> {{ $comment['post']['post_title'] ?? 'N/A' }}</code>  
 
         </div>
 
