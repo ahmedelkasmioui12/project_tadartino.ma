@@ -1,6 +1,6 @@
 @php
     $agents = App\Models\User::where('status', 'active')
-        ->where('role', 'agent')
+        ->where('role', ['agent', 'admin'])
         ->orderBy('id', 'DESC')
         ->get();
 @endphp
