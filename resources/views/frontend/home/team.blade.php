@@ -1,6 +1,6 @@
 @php
     $agents = App\Models\User::where('status', 'active')
-        ->where('role', ['agent', 'admin'])
+        ->where('role', 'agent')
         ->orderBy('id', 'DESC')
         ->get();
 @endphp
@@ -9,8 +9,8 @@
     </div>
     <div class="auto-container">
         <div class="sec-title">
-            <h5>Our Agents</h5>
-            <h2>Meet Our Excellent Agents</h2>
+            <h5 id="i_our_agents">Our Agents</h5>
+            <h2 id="i_meet_our_agents">Meet Our Excellent Agents</h2>
         </div>
         <div class="single-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
 
@@ -30,7 +30,6 @@
                                     <li><a href="https://www.facebook.com/tadartino.ma"><i class="fab fa-facebook"></i></a></li>
                                     <li><a href="https://wa.me/{{ $item->phone }}"><i class="fab fa-whatsapp"></i></a></li>
 
-
                                     
 
                                 </ul>
@@ -43,3 +42,5 @@
         </div>
     </div>
 </section>
+
+<script src="{{asset('js/traduction.js')}}" ></script>

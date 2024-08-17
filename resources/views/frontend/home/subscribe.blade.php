@@ -12,8 +12,8 @@
             <div class="row clearfix">
                 <div class="col-lg-6 col-md-6 col-sm-12 text-column">
                     <div class="text">
-                        <span>Subscribe</span>
-                        <h2>Sign Up To Our Newsletter To Get The Latest News And Offers.</h2>
+                        <span id="h_subscribe">Subscribe</span>
+                        <h2 id="h_sign_up">Sign Up To Our Newsletter To Get The Latest News And Offers.</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 form-column">
@@ -27,7 +27,7 @@
                             @csrf
                             <div class="form-group">
                                 <input type="email" name="email" placeholder="Enter your email" required="">
-                                <button type="submit">Subscribe Now</button>
+                                <button type="submit" id="h_subscribe_now">Subscribe Now</button>
                             </div>
                         </form>
                     </div>
@@ -35,5 +35,7 @@
             </div>
         </div>
     </section>
+
+    <script src="{{asset('js/traduction.js')}}" > </script>
 </body>
 </html>

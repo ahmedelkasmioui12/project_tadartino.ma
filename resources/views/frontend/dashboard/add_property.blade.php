@@ -39,14 +39,14 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Property Name</label>
+                                        <label class="form-label" id="Property Name">Property Name</label>
                                         <input type="text" name="property_name" class="form-control" required>
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Property Status</label>
+                                        <label class="form-label" id="Property Status">Property Status</label>
                                         <select name="property_status" class="form-select" required>
                                             <option selected="" disabled="">Select Status</option>
                                             <option value="rent">For Rent</option>
@@ -57,21 +57,21 @@
 
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Lowest Price</label>
+                                        <label class="form-label" id="Lowest Price">Lowest Price</label>
                                         <input type="text" name="lowest_price" class="form-control">
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Max Price</label>
+                                        <label class="form-label" id="Max Price">Max Price</label>
                                         <input type="text" name="max_price" class="form-control">
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Main Thumbnail</label>
+                                        <label class="form-label" id="Main Thumbnail">Main Thumbnail</label>
                                         <input type="file" name="property_thambnail" class="form-control" onChange="mainThamUrl(this)">
                                         <img src="" id="mainThmb">
                                     </div>
@@ -79,7 +79,7 @@
 
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Multiple Images</label>
+                                        <label class="form-label" id="Multiple Images">Multiple Images</label>
                                         <input type="file" name="multi_img[]" class="form-control" id="multiImg" multiple>
                                         <div class="row" id="preview_img"></div>
                                     </div>
@@ -87,28 +87,28 @@
 
                                 <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Bedrooms</label>
+                                        <label class="form-label" id="Bedrooms">Bedrooms</label>
                                         <input type="text" name="bedrooms" class="form-control">
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Bathrooms</label>
+                                        <label class="form-label" id="Bathrooms">Bathrooms</label>
                                         <input type="text" name="bathrooms" class="form-control">
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Garage</label>
+                                        <label class="form-label" id="Garage">Garage</label>
                                         <input type="text" name="garage" class="form-control">
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-3">
                                     <div class="mb-3">
-                                        <label class="form-label">Garage Size</label>
+                                        <label class="form-label" id="Garage Size">Garage Size</label>
                                         <input type="text" name="garage_size" class="form-control">
                                     </div>
                                 </div><!-- Col -->
@@ -117,7 +117,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Property Type</label>
+                                        <label class="form-label" id="Property Type">Property Type</label>
                                         <select name="ptype_id" class="form-select" required>
                                             <option selected="" disabled="">Select Type</option>
                                             @foreach ($propertytype as $ptype)
@@ -126,15 +126,15 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Property Video</label>
+                                        <label class="form-label" id="Property Video">Property Video</label>
                                         <input type="text" name="property_video" class="form-control">
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Property Amenities</label>
-                                        <select name="amenities_id[]" class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">
+                                        <label class="form-label" id="Property Amenities">Property Amenities</label>
+                                        <select name="amenities_id[]" class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%"> 
                                             @foreach ($amenities as $ameni)
                                             <option value="{{ $ameni->amenitis_name }}">{{ $ameni->amenitis_name }}</option>
                                             @endforeach
@@ -144,9 +144,9 @@
 
                                 <div class="col-sm-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Agent</label>
-                                        <select name="agent_id" class="form-select">
-                                            <option selected="" disabled="">Select Agent</option>
+                                        <label class="form-label" id="Agent">Agent</label>
+                                        <select name="agent_id" class="form-select" >
+                                            <option selected="">No</option>
                                             @foreach ($activeAgent as $agent)
                                             <option value="{{ $agent->id }}">{{ $agent->name }}</option>
                                             @endforeach
@@ -157,31 +157,25 @@
 
                             <div class="col-sm-12">
                                 <div class="mb-3">
-                                    <label class="form-label">Short Description</label>
+                                    <label class="form-label" id="Short Description">Short Description</label>
                                     <textarea name="short_descp" class="form-control" rows="3"></textarea>
                                 </div>
                             </div><!-- Col -->
 
                             <div class="col-sm-12">
                                 <div class="mb-3">
-                                    <label class="form-label">Long Description</label>
+                                    <label class="form-label" id="Long Description">Long Description</label>
                                     <textarea name="long_descp" class="form-control" rows="10"></textarea>
                                 </div>
                             </div><!-- Col -->
 
                             <hr>
 
-                            <div class="mb-3">
-                    
-
-                            
-                            </div>
-
                             <!-- Facilities Option -->
                             <div class="row add_item">
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="facility_name" class="form-label">Facilities</label>
+                                        <label for="facility_name" class="form-label" id="Facilities">Facilities</label>
                                         <select name="facility_name[]" id="facility_name" class="form-control">
                                             <option value="">Select Facility</option>
                                             <option value="Hospital">Hospital</option>
@@ -201,7 +195,7 @@
 
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="distance" class="form-label">Distance</label>
+                                        <label for="distance" class="form-label" id="Distance">Distance</label>
                                         <input type="text" name="distance[]" id="distance" class="form-control" placeholder="Distance (Km)">
                                     </div>
                                 </div><!-- Col -->
@@ -215,28 +209,24 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Latitude</label>
+                                        <label class="form-label" id="Latitude">Latitude</label>
                                         <input type="text" name="latitude" class="form-control">
                                         <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get Latitude from address</a>
+
                                     </div>
                                 </div><!-- Col -->
 
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Longitude</label>
+                                        <label class="form-label" id="Longitude">Longitude</label>
                                         <input type="text" name="longitude" class="form-control">
                                         <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get Longitude from address</a>
+
                                     </div>
                                 </div><!-- Col -->
                             </div><!-- Row -->
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="mb-3">
-                                        <button type="submit" class="btn btn-primary">Save Property</button>
-                                    </div>
-                                </div><!-- Col -->
-                            </div><!-- Row -->
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
                         </form>
 
                     </div>
@@ -245,8 +235,7 @@
         </div>
     </div>
 
-
-
+</div>
 <!-- jQuery Scripts for Image Preview -->
 <script type="text/javascript">
     function mainThamUrl(input) {
@@ -284,3 +273,4 @@
 </script>
 
 @endsection
+<script src="{{asset('js/traduction.js')}}" ></script>

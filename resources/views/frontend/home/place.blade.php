@@ -15,9 +15,9 @@
 <section class="place-section sec-pad">
     <div class="auto-container">
         <div class="sec-title centred">
-            <h5>Top Places</h5>
-            <h2>Most Popular Places</h2>
-            <p>Discover the most sought-after locations that offer the perfect blend of comfort and convenience.            </p>
+            <h5 id="h_top_places">Top Places</h5>
+            <h2 id="h_most_popular_places">Most Popular Places</h2>
+            <p id="h_discover_locations">Discover the most sought-after locations that offer the perfect blend of comfort and convenience.</p>
         </div>
         <div class="sortable-masonry">
             <div class="items-container row clearfix">
@@ -31,7 +31,7 @@
                                 </figure>
                                 <div class="text">
                                     <h4><a href="{{ route('state.details', $skip_state_0->id) }}">{{ $skip_state_0->state_name }}</a></h4>
-                                    <p>{{ count($property_0) }} Properties</p>
+                                    <p id="h_properties">{{ count($property_0) }} Properties</p>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                 </figure>
                                 <div class="text">
                                     <h4><a href="{{ route('state.details', $skip_state_1->id) }}">{{ $skip_state_1->state_name }}</a></h4>
-                                    <p>{{ count($property_1) }} Properties</p>
+                                    <p id="h_properties">{{ count($property_1) }} Properties</p>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                 </figure>
                                 <div class="text">
                                     <h4><a href="{{ route('state.details', $skip_state_2->id) }}">{{ $skip_state_2->state_name }}</a></h4>
-                                    <p>{{ count($property_2) }} Properties</p>
+                                    <p id="h_properties">{{ count($property_2) }} Properties</p>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 </figure>
                                 <div class="text">
                                     <h4><a href="{{ route('state.details', $skip_state_3->id) }}">{{ $skip_state_3->state_name }}</a></h4>
-                                    <p>{{ count($property_3) }} Properties</p>
+                                    <p id="h_properties">{{ count($property_3) }} Properties</p>
                                 </div>
                             </div>
                         </div>
@@ -90,3 +90,6 @@
         </div>
     </div>
 </section>
+
+
+<script src="{{asset('js/traduction.js')}}" ></script>

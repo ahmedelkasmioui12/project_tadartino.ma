@@ -4,9 +4,9 @@
 <section class="news-section sec-pad" id="news">
     <div class="auto-container">
         <div class="sec-title centred">
-            <h5>News & Article</h5>
-            <h2>Stay Update With Realshed</h2>
-            <p>Keep up with the latest trends, news, and insights in the real estate industry.
+            <h5 class="news_article_title">News & Article</h5>
+            <h2 id="main_title">Stay Update With Realshed</h2>
+            <p id="description">Keep up with the latest trends, news, and insights in the real estate industry.
 
             </p>
         </div>
@@ -19,10 +19,10 @@
                             <div class="image-box">
                                 <figure class="image"><a href="{{ url('blog/details/' . $item->post_slug) }}"><img
                                             src="{{ asset($item->post_image) }}" alt=""></a></figure>
-                                <span class="category">New</span>
+                                <span class="category" id="new">New</span>
                             </div>
                             <div class="lower-content">
-                                <h4><a href="{{ url('blog/details/' . $item->post_slug) }}">{{ $item->post_title }}</a>
+                                <h4 ><a href="{{ url('blog/details/' . $item->post_slug) }}">{{ $item->post_title }}</a>
                                 </h4>
                                 <ul class="post-info clearfix">
                                     <li class="author-box">
@@ -72,3 +72,5 @@
         <br><br>
     </div>
 </section>
+
+<script  src="{{asset('js/traduction.js') }}"></script>
