@@ -7,6 +7,7 @@ $ptypes = App\Models\PropertyType::latest()->get();
     <div class="auto-container">
         <div class="inner-container">
             <div class="content-box centred">
+                <br><br><br><br>
                 <h2 id="d_1">Tadartino.ma is a real estate platform.</h2>
                 <p id="d_2">Your trusted destination to find the property of your dreams.</p>
             </div>

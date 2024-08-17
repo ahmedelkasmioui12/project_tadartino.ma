@@ -4,51 +4,69 @@
 
 </head>
 <style>
-/* Header styles */
-.header-top {
-    background-color: #000000; /* Background color of the header top */
-    padding: 10px 0; /* Padding around the content */
-    border-bottom: 1px solid #ddd; /* Border at the bottom */
-    position: relative; /* Ensure it is positioned correctly */
-    z-index: 999; /* Ensure it stays above other content */
-}
+    /* Header styles */
+    .header-top {
+        background-color: #000000;
+        /* Background color of the header top */
+        padding: 10px 0;
+        /* Padding around the content */
+        border-bottom: 1px solid #ddd;
+        /* Border at the bottom */
+        position: relative;
+        /* Ensure it is positioned correctly */
+        z-index: 999;
+        /* Ensure it stays above other content */
+    }
 
-.header-top .top-inner {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out left and right columns */
-    align-items: center; /* Align items vertically */
-    max-width: 1200px; /* Limit the width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add some padding */
-}
+    .header-top .top-inner {
+        display: flex;
+        /* Use flexbox for layout */
+        justify-content: space-between;
+        /* Space out left and right columns */
+        align-items: center;
+        /* Align items vertically */
+        max-width: 1200px;
+        Limit the width margin: 0 auto;
+        /* Center the container */
+        padding: 0 20px;
+        /* Add some padding */
+    }
 
-.header-top .left-column ul.info {
-    list-style: none; /* Remove default list styling */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for horizontal layout */
-    align-items: center; /* Align items vertically */
-}
+    .header-top .left-column ul.info {
+        list-style: none;
+        /* Remove default list styling */
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+        display: flex;
+        /* Use flexbox for horizontal layout */
+        align-items: center;
+        /* Align items vertically */
+    }
 
-.header-top .left-column ul.info li {
-    margin-right: 15px; /* Space between items */
-}
+    .header-top .left-column ul.info li {}
 
-.header-top .right-column {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically */
-}
+    .header-top .right-column {
+        display: flex;
+        /* Use flexbox for layout */
+        align-items: center;
+        /* Align items vertically */
+    }
 
-.header-top .right-column .social-links {
-    margin-right: 20px; /* Space between social links and other elements */
-}
+    .header-top .right-column .social-links {
+        margin-right: 20px;
+        /* Space between social links and other elements */
+    }
 
-.header-top .right-column .sign-box a {
-    margin-left: 15px; /* Space between sign-in and dashboard/logout */
-    text-decoration: none; /* Remove underline from links */
-    color: #ffffff; /* Link color */
-}
-
+    .header-top .right-column .sign-box a {
+        margin-left: 15px;
+        /* Space between sign-in and dashboard/logout */
+        text-decoration: none;
+        /* Remove underline from links */
+        color: #ffffff;
+        /* Link color */
+    }
 </style>
 <header class="main-header">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -90,7 +108,7 @@
         </div>
     </div>
 
-    <!-- header-lower --> <br>
+    <!-- header-lower -->
     <div class="header-lower" style="position: fixed; background-color: white; width: 100%; top : 3% ">
         <div class="outer-box">
             <div class="main-box">
@@ -127,18 +145,16 @@
 
                                 <li><a href="#teams"><span id="teams">Teams </span></a> </li>
                                 <li><a href="{{ route('contact.index') }}" id="g_contact"><span>Contact</span></a></li>
-                           
+
                                 <li class="btn-box"> <a href="{{ route('user.properties.create') }}" id="add_listing"
                                         class="theme-btn btn-one">
                                         <span>+</span>Add Listing</a>
                                 </li>
-                               
-
-                                {{-- <li><a href="contact.html"><span>Contact</span></a></li>  --}}
                                 <li>
                                     <select name="language" id="language-dropdown"
-                                        onchange="ChangeSelectLang(this.value)" >
-                                        <option value="en" data-icon="fa-flag-usa" class="theme-btn btn-one">English</option>
+                                        onchange="ChangeSelectLang(this.value)">
+                                        <option value="en" data-icon="fa-flag-usa" class="theme-btn btn-one">English
+                                        </option>
                                         <option value="ar" data-icon="fa-flag-om">العربية</option>
                                         <option value="es" data-icon="fa-flag-es">Español</option>
                                         <option value="fr" data-icon="fa-flag-fr">Français</option>
