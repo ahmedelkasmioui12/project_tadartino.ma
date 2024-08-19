@@ -3,27 +3,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
-<style>
-    /* Styles pour rendre la navbar fixe */
-    .header-lower {
-        position: fixed;
-        top: 3;
-        left: 0;
-        width: 100%;
-        z-index: 1000; /* Assurez-vous que la navbar reste au-dessus des autres éléments */
-        background-color: #fff; /* Ajoutez un fond pour éviter la transparence lors du défilement */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : Ajoutez une ombre pour un effet visuel */
-    }
-
-    /* Ajoutez un décalage en haut de la page pour que la navbar ne cache pas le contenu */
-    .main-header {
-
-    }
-</style>
 
 <header class="main-header">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <!-- header-top -->
     <div class="header-top">
         <div class="top-inner clearfix">
@@ -32,7 +13,7 @@
                     <ul class="info clearfix">
                         <li><i class="fas fa-map-marker-alt"></i>13 Rue alqadi Ayaad 62000 - Nador/Maroc</li>
                         <li><i class="fas fa-clock"></i>Mon - Sat 9.00 - 18.00</li>
-                        <li><i class="fas fa-phone"></i><a href="tel:+212808669557">+212 8 08 66 95 57  </a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+212808669557">+212 8 08 66 95 57 </a></li>
                         <li><i class="fas fa-phone"></i>+212 6 37 65 42 06</li>
                     </ul>
                 </ul>
@@ -57,10 +38,11 @@
                     </div>
                 @endauth
 
+
+
             </div>
         </div>
     </div>
-
     <!-- header-lower -->
     <div class="header-lower" >
         <div class="outer-box">
@@ -130,9 +112,20 @@
             </div>
         </div>
     </div>
-
-
-
-</header>
-
-<script src="{{ asset('js/traduction.js') }}"></script>
+    <!--sticky Header-->
+    <div class="sticky-header">
+        <div class="outer-box">
+            <div class="main-box">
+                <div class="logo-box">
+                </div>
+                <div class="menu-area clearfix">
+                    <nav class="main-menu clearfix">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
+                </div>
+                <div class="btn-box">
+                    <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                </div>
+            </div>
+        </div>
+    </div>
