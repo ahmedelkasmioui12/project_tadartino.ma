@@ -229,6 +229,44 @@
                                 </div>
                             </div><!-- Row -->
 
+
+                            <div style="visibility: hidden">
+                                <div class="whole_extra_item_add" id="whole_extra_item_add">
+                                   <div class="whole_extra_item_delete" id="whole_extra_item_delete">
+                                      <div class="container mt-2">
+                                         <div class="row">
+                                           
+                                            <div class="form-group col-md-4">
+                                               <label for="facility_name">Facilities</label>
+                                               <select name="facility_name[]" id="facility_name" class="form-control">
+                                                     <option value="">Select Facility</option>
+                                                     <option value="Hospital">Hospital</option>
+                                                     <option value="SuperMarket">Super Market</option>
+                                                     <option value="School">School</option>
+                                                     <option value="Entertainment">Entertainment</option>
+                                                     <option value="Pharmacy">Pharmacy</option>
+                                                     <option value="Airport">Airport</option>
+                                                     <option value="Railways">Railways</option>
+                                                     <option value="Bus Stop">Bus Stop</option>
+                                                     <option value="Beach">Beach</option>
+                                                     <option value="Mall">Mall</option>
+                                                     <option value="Bank">Bank</option>
+                                               </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                               <label for="distance">Distance</label>
+                                               <input type="text" name="distance[]" id="distance" class="form-control" placeholder="Distance (Km)">
+                                            </div>
+                                            <div class="form-group col-md-4" style="padding-top: 20px">
+                                               <span class="btn btn-success btn-sm addeventmore"><i class="fa fa-plus-circle">Add</i></span>
+                                               <span class="btn btn-danger btn-sm removeeventmore"><i class="fa fa-minus-circle">Remove</i></span>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>  
+
                             <!-- Latitude and Longitude -->
                             <div class="row">
                                 <div class="col-sm-6">
@@ -295,6 +333,19 @@
         });
     });
 </script>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+       var counter = 0;
+       $(document).on("click",".addeventmore",function(){
+             var whole_extra_item_add = $("#whole_extra_item_add").html();
+             $(this).closest(".add_item").append(whole_extra_item_add);
+             counter++;
+       });
+       $(document).on("click",".removeeventmore",function(event){
+             $(this).closest("#whole_extra_item_delete").remove();
+             counter -= 1
+       });
+    });
+ </script>
 @endsection
 <script src="{{asset('js/traduction.js')}}" ></script>

@@ -201,6 +201,7 @@ class UserController extends Controller
                     'distance' => $request->distance[$i] ?? null,
                 ]);
             }
+        
         }
     
         return redirect()->route('user.properties.create')->with('success', 'Property added successfully!');
