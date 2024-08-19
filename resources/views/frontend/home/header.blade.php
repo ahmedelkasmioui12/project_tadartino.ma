@@ -4,70 +4,23 @@
 
 </head>
 <style>
-    /* Header styles */
-    .header-top {
-        background-color: #000000;
-        /* Background color of the header top */
-        padding: 10px 0;
-        /* Padding around the content */
-        border-bottom: 1px solid #ddd;
-        /* Border at the bottom */
-        position: relative;
-        /* Ensure it is positioned correctly */
-        z-index: 999;
-        /* Ensure it stays above other content */
+    /* Styles pour rendre la navbar fixe */
+    .header-lower {
+        position: fixed;
+        top: 3;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Assurez-vous que la navbar reste au-dessus des autres éléments */
+        background-color: #fff; /* Ajoutez un fond pour éviter la transparence lors du défilement */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : Ajoutez une ombre pour un effet visuel */
     }
 
-    .header-top .top-inner {
-        display: flex;
-        /* Use flexbox for layout */
-        justify-content: space-between;
-        /* Space out left and right columns */
-        align-items: center;
-        /* Align items vertically */
-        max-width: 1200px;
-        Limit the width margin: 0 auto;
-        /* Center the container */
-        padding: 0 20px;
-        /* Add some padding */
-    }
+    /* Ajoutez un décalage en haut de la page pour que la navbar ne cache pas le contenu */
+    .main-header {
 
-    .header-top .left-column ul.info {
-        list-style: none;
-        /* Remove default list styling */
-        margin: 0;
-        /* Remove default margin */
-        padding: 0;
-        /* Remove default padding */
-        display: flex;
-        /* Use flexbox for horizontal layout */
-        align-items: center;
-        /* Align items vertically */
-    }
-
-    .header-top .left-column ul.info li {}
-
-    .header-top .right-column {
-        display: flex;
-        /* Use flexbox for layout */
-        align-items: center;
-        /* Align items vertically */
-    }
-
-    .header-top .right-column .social-links {
-        margin-right: 20px;
-        /* Space between social links and other elements */
-    }
-
-    .header-top .right-column .sign-box a {
-        margin-left: 15px;
-        /* Space between sign-in and dashboard/logout */
-        text-decoration: none;
-        /* Remove underline from links */
-        color: #ffffff;
-        /* Link color */
     }
 </style>
+
 <header class="main-header">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -79,8 +32,8 @@
                     <ul class="info clearfix">
                         <li><i class="fas fa-map-marker-alt"></i>13 Rue alqadi Ayaad 62000 - Nador/Maroc</li>
                         <li><i class="fas fa-clock"></i>Mon - Sat 9.00 - 18.00</li>
-                        <li><i class="fas fa-phone"></i><a href="tel:+212808669557">+212 8 08 66 95 57 Or </a></li>
-                        <li>+212 6 37 65 42 06</li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+212808669557">+212 8 08 66 95 57  </a></li>
+                        <li><i class="fas fa-phone"></i>+212 6 37 65 42 06</li>
                     </ul>
                 </ul>
             </div>
@@ -109,7 +62,7 @@
     </div>
 
     <!-- header-lower -->
-    <div class="header-lower" style="position: fixed; background-color: white; width: 100%; top : 3% ">
+    <div class="header-lower" >
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
