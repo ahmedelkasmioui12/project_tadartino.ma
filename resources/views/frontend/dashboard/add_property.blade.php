@@ -4,6 +4,26 @@
 <!-- Include SweetAlert2 CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+@if (session('error'))
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Erreur',
+            text: '{{ session('error') }}',
+        });
+    </script>
+@endif
+
+@if ($errors->any())
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Erreur',
+            html: '<ul>@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul>',
+        });
+    </script>
+@endif
+
 
 <div class="page-content">
 
@@ -48,12 +68,13 @@
                                     <div class="form-group mb-3">
                                         <label class="form-label" id="Property Status">Property Status</label>
                                         <select name="property_status" class="form-select" required>
-                                            <option selected="" disabled="">Select Status</option>
+                                            <option selected disabled>Select Status</option>
                                             <option value="rent">For Rent</option>
                                             <option value="buy">For Buy</option>
                                         </select>
                                     </div>
                                 </div><!-- Col -->
+                                
 
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
@@ -72,7 +93,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
                                         <label class="form-label" id="Main Thumbnail">Main Thumbnail</label>
-                                        <input type="file" name="property_thambnail" class="form-control" onChange="mainThamUrl(this)">
+                                        <input type="file" name="property_thambnail" class="form-control" onChange="mainThamUrl(this)"  required >
                                         <img src="" id="mainThmb">
                                     </div>
                                 </div><!-- Col -->
@@ -80,7 +101,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group mb-3">
                                         <label class="form-label" id="Multiple Images">Multiple Images</label>
-                                        <input type="file" name="multi_img[]" class="form-control" id="multiImg" multiple>
+                                        <input type="file" name="multi_img[]" class="form-control" id="multiImg" multiple required >
                                         <div class="row" id="preview_img"></div>
                                     </div>
                                 </div><!-- Col -->
@@ -143,15 +164,18 @@
                                 </div><!-- Col -->
 
                                 <div class="col-sm-4">
-                                    <div class="mb-3">
+                                    {{-- <div class="mb-3">
                                         <label class="form-label" id="Agent">Agent</label>
-                                        <select name="agent_id" class="form-select" >
-                                            <option selected="">No</option>
+                                        <select name="agent_id" class="form-select"  required>
+                                            <option selected=""> Select Agent </option>
                                             @foreach ($activeAgent as $agent)
                                             <option value="{{ $agent->id }}">{{ $agent->name }}</option>
+
                                             @endforeach
+                                            <option value="user">user</option>
+
                                         </select>
-                                    </div>
+                                    </div> --}}
                                 </div><!-- Col -->
                             </div><!-- Row -->
 

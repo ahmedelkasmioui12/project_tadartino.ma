@@ -133,7 +133,7 @@ class UserController extends Controller
             'ptype_id' => 'required|integer',
             'amenities_id' => 'array',
             'property_name' => 'required|string|max:255',
-            'property_status' => 'string',
+            'property_status' => 'string|required',
             'property_thambnail' => 'image|mimes:jpg,jpeg,png|max:2048',
             'multi_img.*' => 'image|mimes:jpg,jpeg,png|max:2048',
         ]);
